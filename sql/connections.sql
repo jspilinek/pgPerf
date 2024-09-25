@@ -7,4 +7,5 @@ WHERE name = 'max_connections'
 \g (format=html)
 
 SELECT * FROM pg_stat_activity
+ORDER BY query_start ASC
 \g (format=html)
