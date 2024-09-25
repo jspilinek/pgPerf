@@ -9,10 +9,12 @@ SELECT Current_database()
        Pg_backend_pid() 
        AS ProcessID --Current user pid 
        , 
+       current_timestamp
+       ,
        Pg_postmaster_start_time() 
        AS Server_Start_Time --Last start time 
        , 
        current_timestamp :: TIMESTAMP - Pg_postmaster_start_time() :: TIMESTAMP
        AS
-       Running_Since
+       Uptime
 \g (format=html)
