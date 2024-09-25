@@ -13,6 +13,8 @@
 \i sql/00_scriptLauncher.sql
 \set scriptName extensions
 \i sql/00_scriptLauncher.sql
+\set scriptName connections
+\i sql/00_scriptLauncher.sql
 
 --Column 2
 \set scriptName databaseSizes
