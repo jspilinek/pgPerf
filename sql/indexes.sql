@@ -1,4 +1,4 @@
-\o 'html/indexes.html'
+\o 'html/output/indexes.html'
 -- All indexes
 SELECT
     schemaname AS schemaname,
@@ -27,7 +27,7 @@ ORDER BY
     indexname ASC
 \g (format=html)
 
-\o 'html/indexes.txt'
+\o 'html/output/indexes.txt'
 SELECT
     schemaname AS schemaname,
     t.relname AS tablename,

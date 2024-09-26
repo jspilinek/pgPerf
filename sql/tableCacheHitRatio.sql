@@ -1,4 +1,4 @@
-\o 'html/tableCacheHitRatio.html'
+\o 'html/output/tableCacheHitRatio.html'
 -- Measure cache hit ratio for tables
 SELECT relname AS "relation", 
        heap_blks_read AS heap_read, 

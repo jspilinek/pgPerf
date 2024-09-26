@@ -1,4 +1,4 @@
-\o 'html/topQueriesByTotalPlanTime.html'
+\o 'html/output/topQueriesByTotalPlanTime.html'
 --SQL statements by total_plan_time
 SELECT   *
 FROM     pg_stat_statements 

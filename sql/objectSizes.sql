@@ -1,4 +1,4 @@
-\o 'html/objectSizes.html'
+\o 'html/output/objectSizes.html'
 --Database object Sizes
 SELECT nspname                                        AS schemaname, 
        cl.relname                                     AS objectname, 

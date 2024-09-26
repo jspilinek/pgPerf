@@ -1,4 +1,4 @@
-\o 'html/connections.html'
+\o 'html/output/connections.html'
 SELECT count(1) AS current_connection_count FROM pg_stat_activity
 \g (format=html)
 

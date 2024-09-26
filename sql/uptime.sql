@@ -1,4 +1,4 @@
-\o 'html/uptime.html'
+\o 'html/output/uptime.html'
 --Server up TIME
 SELECT Current_database() 
        AS Current_Database --Current database 

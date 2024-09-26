@@ -1,4 +1,4 @@
-\o 'html/topQueriesByMaxExecTime.html'
+\o 'html/output/topQueriesByMaxExecTime.html'
 --Longest max execution time
 SELECT   *
 FROM     pg_stat_statements 

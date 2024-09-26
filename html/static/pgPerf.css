@@ -1,0 +1,171 @@
+/*Light Theme (Default) */
+
+:root {
+    color: black;
+    background: white;
+}
+
+body {
+    font:10pt Arial,Helvetica,Geneva,sans-serif; 
+}
+
+table {
+    font-size:8pt;
+    white-space: nowrap;
+    border: 1px solid black;
+}
+
+tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+th {
+    color:white;
+    background:#5BB73B;
+    border: 1px solid black;
+}
+
+td {
+    border: 1px solid black;
+}
+
+tr:hover {
+    background: yellow;
+}
+
+.main {
+    font-size:10pt;
+    white-space: nowrap;
+    vertical-align: text-top;
+}
+
+.main tr {
+    vertical-align: text-top;
+}
+
+.main tr:hover {
+    background: white;
+}
+
+h1 {
+    color: #336699;
+    font:16pt Arial,Helvetica,Geneva,sans-serif;
+}
+
+h2 {
+    color: #336699;
+    font:12pt Arial,Helvetica,Geneva,sans-serif;
+}
+
+header {
+    font-size:8pt; 
+}
+
+font.label-header {
+    color:black; 
+}
+
+footer {
+    font-size:8pt; 
+    color:#999999; 
+    border-top:1px solid #cccc99; 
+    margin-top:30pt;
+}
+
+p.failedQuery {
+    color: red;
+}
+
+strong.failed {
+    color:red;
+}
+
+/* Dark Theme */
+/* @media screen and (prefers-color-scheme: dark) {
+
+    :root {
+        color:#c8d1d9;
+        background:#0d1116; 
+    }
+    
+    body {
+        background:#0d1116; 
+        font:10pt Arial,Helvetica,Geneva,sans-serif; 
+    }
+
+    table {
+        font-size:8pt;
+        white-space: nowrap;
+        border: 1px solid #30363d;
+    }
+
+    tr:nth-child(even) {
+        background: #161b22;
+    }
+
+    th {
+        color:#31b752;
+        background: #2b542e;
+        border: 1px solid #30363d;
+    }
+
+    td {
+        border: 1px solid #30363d;
+    }
+
+    tr:hover {
+        background: #3700B3;
+    }
+
+    .main {
+        font-size:10pt;
+        white-space: nowrap;
+        vertical-align: text-top;
+    }
+
+    .main tr {
+        vertical-align: text-top;
+    }
+
+    .main tr:hover {
+        background: #0d1116;
+    }
+
+    h1 {
+        color: lightskyblue;
+        font:16pt Arial,Helvetica,Geneva,sans-serif;
+    }
+
+    h2 {
+        color: lightskyblue;
+        font:12pt Arial,Helvetica,Geneva,sans-serif;
+    }
+
+    header {
+        color:#c8d1d9;
+        font-size:8pt; 
+    }
+
+    footer {
+        font-size:8pt; 
+        color:grey; 
+        border-top:1px solid grey; 
+        margin-top:30pt;
+    }
+
+    a {
+        color: #3ba0e6;
+    }
+
+    a:hover {
+        color: #3b9fe6bb;
+    }
+
+    a:visited {
+        color: #9e49db;
+    }
+
+    font.label-header {
+        color:lightskyblue;
+    }
+} */

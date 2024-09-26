@@ -1,4 +1,4 @@
-\o 'html/databaseSizes.html'
+\o 'html/output/databaseSizes.html'
 --Sizes
 SELECT Pg_size_pretty(Sum(Pg_database_size(datname))) AS total_database_size
 FROM   pg_database

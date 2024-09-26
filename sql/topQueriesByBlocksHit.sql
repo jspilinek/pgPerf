@@ -1,4 +1,4 @@
-\o 'html/topQueriesByBlocksHit.html'
+\o 'html/output/topQueriesByBlocksHit.html'
 --Longest average execution time
 SELECT   shared_blks_hit + local_blks_hit AS Blocks_Hit,
 *

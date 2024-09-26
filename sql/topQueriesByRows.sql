@@ -1,4 +1,4 @@
-\o 'html/topQueriesByRows.html'
+\o 'html/output/topQueriesByRows.html'
 --SQL statements returning the most rows
 SELECT   *
 FROM     pg_stat_statements 

@@ -1,4 +1,4 @@
-\o 'html/tables.html'
+\o 'html/output/tables.html'
 --Table Sizes
 SELECT oid,
        table_schema,

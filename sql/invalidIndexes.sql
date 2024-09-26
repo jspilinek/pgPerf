@@ -1,4 +1,4 @@
-\o 'html/invalidIndexes.html'
+\o 'html/output/invalidIndexes.html'
 SELECT n.nspname AS schema,
 c.relname AS tablename,
 c.relname AS indexname

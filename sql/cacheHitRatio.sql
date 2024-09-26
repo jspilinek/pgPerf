@@ -1,4 +1,4 @@
-\o 'html/cacheHitRatio.html'
+\o 'html/output/cacheHitRatio.html'
 
 --Cache Hit Ratio
 SELECT 'user tables' as source,

@@ -1,4 +1,4 @@
-\o 'html/missingIndexes.html'
+\o 'html/output/missingIndexes.html'
 --maybe-missing indexes?
 -- See on which tables PG is doing a lot of sequential scans. On small tables
 -- a seq scan is more efficient than an index scan so always think if adding

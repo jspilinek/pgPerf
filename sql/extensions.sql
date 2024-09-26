@@ -1,4 +1,4 @@
-\o 'html/extensions.html'
+\o 'html/output/extensions.html'
 --List installed extenstions
 SELECT pge.extname    AS extension_name,
        pge.extversion AS extension_version,

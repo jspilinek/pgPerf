@@ -1,4 +1,4 @@
-\o 'html/indexStats.html'
+\o 'html/output/indexStats.html'
 --select * from pg_stat_user_indexes;
 
 --Index Usuage Stats

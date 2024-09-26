@@ -1,4 +1,4 @@
-\o 'html/topQueriesByTotalExecTime.html'
+\o 'html/output/topQueriesByTotalExecTime.html'
 --Longest cumultive time
 SELECT   *
 FROM     pg_stat_statements 

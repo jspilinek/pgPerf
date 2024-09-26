@@ -1,4 +1,4 @@
-\o 'html/topQueriesByMeanExecTime.html'
+\o 'html/output/topQueriesByMeanExecTime.html'
 --Longest average execution time
 SELECT   *
 FROM     pg_stat_statements 

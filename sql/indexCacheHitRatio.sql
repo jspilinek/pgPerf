@@ -1,4 +1,4 @@
-\o 'html/indexCacheHitRatio.html'
+\o 'html/output/indexCacheHitRatio.html'
 -- Measure cache hit ratio for indexes
 SELECT relname AS "relation",
     idx_blks_read AS index_read, 

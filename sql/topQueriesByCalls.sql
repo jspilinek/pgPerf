@@ -1,4 +1,4 @@
-\o 'html/topQueriesByCalls.html'
+\o 'html/output/topQueriesByCalls.html'
 --SQL statements called most frequently
 SELECT   *
 FROM     pg_stat_statements 
