@@ -31,11 +31,10 @@
 --Column 4
 \set scriptName topQueriesByTotalExecTime   \i sql/00_scriptLauncher.sql
 \set scriptName topQueriesByMeanExecTime    \i sql/00_scriptLauncher.sql
-\set scriptName topQueriesByMaxExecTime     \i sql/00_scriptLauncher.sql
+\set scriptName topQueriesByBlocksHit       \i sql/00_scriptLauncher.sql
+\set scriptName topQueriesByBlocksRead      \i sql/00_scriptLauncher.sql
 \set scriptName topQueriesByCalls           \i sql/00_scriptLauncher.sql
 \set scriptName topQueriesByRows            \i sql/00_scriptLauncher.sql
 \set scriptName topQueriesByTotalPlanTime   \i sql/00_scriptLauncher.sql
-\set scriptName topQueriesByBlocksRead      \i sql/00_scriptLauncher.sql
-\set scriptName topQueriesByBlocksHit       \i sql/00_scriptLauncher.sql
 
 \echo Done
