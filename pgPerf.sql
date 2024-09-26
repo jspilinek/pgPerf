@@ -22,6 +22,7 @@
 \set scriptName indexes             \i sql/00_scriptLauncher.sql
 \set scriptName indexStats          \i sql/00_scriptLauncher.sql
 \set scriptName missingIndexes      \i sql/00_scriptLauncher.sql
+\set scriptName invalidIndexes      \i sql/00_scriptLauncher.sql
 \set scriptName cacheHitRatio       \i sql/00_scriptLauncher.sql
 \set scriptName tableCacheHitRatio  \i sql/00_scriptLauncher.sql
 \set scriptName indexCacheHitRatio  \i sql/00_scriptLauncher.sql
