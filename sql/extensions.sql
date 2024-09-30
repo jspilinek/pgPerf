@@ -1,12 +1,31 @@
 \o 'html/output/extensions.html'
---List installed extenstions
-SELECT pge.extname    AS extension_name,
-       pge.extversion AS extension_version,
-       pge.extowner   AS extension_owner,
-       pgu.usename    AS owner_name,
-       pgu.usesuper   AS is_super_user
-FROM   pg_extension pge
-       JOIN pg_user pgu
-         ON pge.extowner = pgu.usesysid
-\g (format=html)
-
+\qecho <!DOCTYPE html>
+\qecho <html>
+\qecho    <head>
+\qecho        <title>Extensions</title>
+\qecho        <link rel="stylesheet" type="text/css" href="../static/pgPerf.css"/>
+\qecho        <script src="../static/sorttable.js"></script>
+\qecho    </head>
+\qecho    <body>
+\qecho        
+\qecho        <h1>Extensions</h1>
+\qecho        <hr>
+\qecho        <br>
+\qecho        <a href="../pgPerf.html">Back to main page</a>
+\qecho        <br>
+\qecho        <!-- [<a href="prevPage.html">Prev</a>] [<a href="nextPage.html">Next</a>] -->
+\qecho        <br>
+\qecho        <br>
+\i sql/sub/:scriptName.sql
+\qecho         <br>
+\qecho         <!-- <h2>Comments</h2> -->
+\qecho         <!-- <p>Insert comments here</p> -->
+\qecho         <br>
+\qecho         <a href="../pgPerf.html">Back to main page</a>
+\qecho         <br>
+\qecho         <!-- [<a href="prevPage.html">Prev</a>] [<a href="nextPage.html">Next</a>] -->
+\qecho         <br>
+\qecho         <!-- <br>
+\qecho         <footer></footer> -->
+\qecho     </body>
+\qecho </html>

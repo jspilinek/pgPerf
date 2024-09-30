@@ -4,6 +4,8 @@
 --Uncomment below line for timing displayed in console
 --\timing on
 
+\pset tableattr class=sortable
+
 --Column 1
 \set scriptName version             \i sql/00_scriptLauncher.sql
 \set scriptName uptime              \i sql/00_scriptLauncher.sql

@@ -1,24 +1,31 @@
 \o 'html/output/databaseSizes.html'
---Sizes
-SELECT Pg_size_pretty(Sum(Pg_database_size(datname))) AS total_database_size
-FROM   pg_database
-\g (format=html)
-
- 
-SELECT Pg_size_pretty(Sum(size)) AS total_WAL_size
-FROM   Pg_ls_waldir()
-\g (format=html)
-
-
-SELECT
-    pg_database.datname AS database_name,
-    pg_size_pretty(pg_database_size(pg_database.datname)) AS size
-FROM
-    pg_database
-\g (format=html)
-
-	
-SELECT Current_database(), 
-       Pg_size_pretty(Pg_database_size(Current_database()))
-\g (format=html)
-
+\qecho <!DOCTYPE html>
+\qecho <html>
+\qecho    <head>
+\qecho        <title>Database Sizes</title>
+\qecho        <link rel="stylesheet" type="text/css" href="../static/pgPerf.css"/>
+\qecho        <script src="../static/sorttable.js"></script>
+\qecho    </head>
+\qecho    <body>
+\qecho        
+\qecho        <h1>Database Sizes</h1>
+\qecho        <hr>
+\qecho        <br>
+\qecho        <a href="../pgPerf.html">Back to main page</a>
+\qecho        <br>
+\qecho        <!-- [<a href="prevPage.html">Prev</a>] [<a href="nextPage.html">Next</a>] -->
+\qecho        <br>
+\qecho        <br>
+\i sql/sub/:scriptName.sql
+\qecho         <br>
+\qecho         <!-- <h2>Comments</h2> -->
+\qecho         <!-- <p>Insert comments here</p> -->
+\qecho         <br>
+\qecho         <a href="../pgPerf.html">Back to main page</a>
+\qecho         <br>
+\qecho         <!-- [<a href="prevPage.html">Prev</a>] [<a href="nextPage.html">Next</a>] -->
+\qecho         <br>
+\qecho         <!-- <br>
+\qecho         <footer></footer> -->
+\qecho     </body>
+\qecho </html>

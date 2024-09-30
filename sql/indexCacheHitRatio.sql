@@ -1,9 +1,31 @@
 \o 'html/output/indexCacheHitRatio.html'
--- Measure cache hit ratio for indexes
-SELECT relname AS "relation",
-    idx_blks_read AS index_read, 
-    idx_blks_hit AS index_hit,
-    COALESCE((( idx_blks_hit * 100 ) / NULLIF(( idx_blks_hit + idx_blks_read ), 0)),0) AS ratio
-FROM pg_statio_user_indexes
-    ORDER BY ratio DESC
-\g (format=html)
+\qecho <!DOCTYPE html>
+\qecho <html>
+\qecho    <head>
+\qecho        <title>Index Cache Hit Ratio</title>
+\qecho        <link rel="stylesheet" type="text/css" href="../static/pgPerf.css"/>
+\qecho        <script src="../static/sorttable.js"></script>
+\qecho    </head>
+\qecho    <body>
+\qecho        
+\qecho        <h1>Index Cache Hit Ratio</h1>
+\qecho        <hr>
+\qecho        <br>
+\qecho        <a href="../pgPerf.html">Back to main page</a>
+\qecho        <br>
+\qecho        <!-- [<a href="prevPage.html">Prev</a>] [<a href="nextPage.html">Next</a>] -->
+\qecho        <br>
+\qecho        <br>
+\i sql/sub/:scriptName.sql
+\qecho         <br>
+\qecho         <!-- <h2>Comments</h2> -->
+\qecho         <!-- <p>Insert comments here</p> -->
+\qecho         <br>
+\qecho         <a href="../pgPerf.html">Back to main page</a>
+\qecho         <br>
+\qecho         <!-- [<a href="prevPage.html">Prev</a>] [<a href="nextPage.html">Next</a>] -->
+\qecho         <br>
+\qecho         <!-- <br>
+\qecho         <footer></footer> -->
+\qecho     </body>
+\qecho </html>

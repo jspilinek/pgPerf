@@ -1,24 +1,31 @@
 \o 'html/output/objectSizes.html'
---Database object Sizes
-SELECT nspname                                        AS schemaname, 
-       cl.relname                                     AS objectname, 
-       CASE relkind 
-         WHEN 'r' THEN 'table'
-         WHEN 'i' THEN 'index'
-         WHEN 'S' THEN 'sequence'
-         WHEN 'v' THEN 'view'
-         WHEN 'm' THEN 'materialized view'
-         ELSE 'other'
-       end                                            AS type, 
-       s.n_live_tup                                   AS total_rows, 
-       Pg_size_pretty(Pg_total_relation_size(cl.oid)) AS size
-FROM   pg_class cl 
-       LEFT JOIN pg_namespace n 
-              ON ( n.oid = cl.relnamespace ) 
-       LEFT JOIN pg_stat_user_tables s 
-              ON ( s.relid = cl.oid ) 
-WHERE  nspname NOT IN ( 'pg_catalog', 'information_schema' ) 
-       AND cl.relkind <> 'i'
-       AND nspname !~ '^pg_toast'
-ORDER  BY Pg_total_relation_size(cl.oid) DESC
-\g (format=html)
+\qecho <!DOCTYPE html>
+\qecho <html>
+\qecho    <head>
+\qecho        <title>Object Sizes</title>
+\qecho        <link rel="stylesheet" type="text/css" href="../static/pgPerf.css"/>
+\qecho        <script src="../static/sorttable.js"></script>
+\qecho    </head>
+\qecho    <body>
+\qecho        
+\qecho        <h1>Object Sizes</h1>
+\qecho        <hr>
+\qecho        <br>
+\qecho        <a href="../pgPerf.html">Back to main page</a>
+\qecho        <br>
+\qecho        <!-- [<a href="prevPage.html">Prev</a>] [<a href="nextPage.html">Next</a>] -->
+\qecho        <br>
+\qecho        <br>
+\i sql/sub/:scriptName.sql
+\qecho         <br>
+\qecho         <!-- <h2>Comments</h2> -->
+\qecho         <!-- <p>Insert comments here</p> -->
+\qecho         <br>
+\qecho         <a href="../pgPerf.html">Back to main page</a>
+\qecho         <br>
+\qecho         <!-- [<a href="prevPage.html">Prev</a>] [<a href="nextPage.html">Next</a>] -->
+\qecho         <br>
+\qecho         <!-- <br>
+\qecho         <footer></footer> -->
+\qecho     </body>
+\qecho </html>

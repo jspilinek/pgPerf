@@ -81,7 +81,7 @@ strong.failed {
 }
 
 /* Dark Theme */
-/* @media screen and (prefers-color-scheme: dark) {
+@media screen and (prefers-color-scheme: dark) {
 
     :root {
         color:#c8d1d9;
@@ -168,4 +168,4 @@ strong.failed {
     font.label-header {
         color:lightskyblue;
     }
-} */
+}
