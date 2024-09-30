@@ -28,6 +28,7 @@
 \set scriptName cacheHitRatio       \i sql/00_scriptLauncher.sql
 \set scriptName tableCacheHitRatio  \i sql/00_scriptLauncher.sql
 \set scriptName indexCacheHitRatio  \i sql/00_scriptLauncher.sql
+\set scriptName statistics          \i sql/00_scriptLauncher.sql
 
 
 --Column 4
