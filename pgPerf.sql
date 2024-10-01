@@ -14,6 +14,7 @@
 \set scriptName connections         \i sql/00_scriptLauncher.sql
 
 --Column 2
+\set scriptName databaseStats       \i sql/00_scriptLauncher.sql
 \set scriptName databaseSizes       \i sql/00_scriptLauncher.sql
 \set scriptName objectSizes         \i sql/00_scriptLauncher.sql
 \set scriptName tables              \i sql/00_scriptLauncher.sql
