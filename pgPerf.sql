@@ -11,13 +11,14 @@
 \set scriptName uptime              \i sql/00_scriptLauncher.sql
 \set scriptName settings            \i sql/00_scriptLauncher.sql
 \set scriptName extensions          \i sql/00_scriptLauncher.sql
-\set scriptName connections         \i sql/00_scriptLauncher.sql
+\set scriptName activity            \i sql/00_scriptLauncher.sql
 
 --Column 2
 \set scriptName databaseStats       \i sql/00_scriptLauncher.sql
 \set scriptName databaseSizes       \i sql/00_scriptLauncher.sql
 \set scriptName objectSizes         \i sql/00_scriptLauncher.sql
 \set scriptName tables              \i sql/00_scriptLauncher.sql
+\set scriptName deadTuples          \i sql/00_scriptLauncher.sql
 \set scriptName columns             \i sql/00_scriptLauncher.sql
 
 

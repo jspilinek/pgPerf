@@ -1,4 +1,6 @@
-SELECT count(1) AS current_connection_count FROM pg_stat_activity
+SELECT state as "process_state", count(*) 
+FROM pg_stat_activity 
+GROUP BY state
 \g (format=html)
 
 SELECT setting AS max_connections FROM pg_settings
