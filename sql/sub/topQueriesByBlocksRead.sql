@@ -1,3 +1,4 @@
+\pset format html
 SELECT auth.rolname AS "user", 
   db.datname AS "database", 
   ss.queryid,
@@ -13,13 +14,12 @@ JOIN pg_authid auth ON auth.oid = ss.userid
 JOIN pg_database db ON db.oid = ss.dbid
 WHERE ss.shared_blks_read > 1000
 ORDER BY ss.shared_blks_read DESC
-limit 50
-\g (format=html)
+limit 50;
 
 --Full output
 SELECT *
 FROM  pg_stat_statements ss
 WHERE ss.shared_blks_read > 1000
 ORDER BY ss.shared_blks_read DESC
-limit 50
-\g (format=html)
+limit 50;
+\pset format aligned

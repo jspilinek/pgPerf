@@ -1,3 +1,4 @@
+\pset format html
 --SQL statements called most frequently
 SELECT auth.rolname AS "user", 
   db.datname AS "database", 
@@ -11,13 +12,12 @@ JOIN pg_authid auth ON auth.oid = ss.userid
 JOIN pg_database db ON db.oid = ss.dbid
 WHERE ss.calls > 1000
 ORDER BY ss.calls DESC
-limit 50
-\g (format=html)
+limit 50;
 
 --Full output
 SELECT *
 FROM  pg_stat_statements ss
 WHERE ss.calls > 1000
 ORDER BY ss.calls DESC
-limit 50
-\g (format=html)
+limit 50;
+\pset format aligned

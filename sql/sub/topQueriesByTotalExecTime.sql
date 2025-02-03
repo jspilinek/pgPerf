@@ -1,3 +1,4 @@
+\pset format html
 --Longest cumultive time
 SELECT auth.rolname AS "user", 
   db.datname AS "database", 
@@ -14,13 +15,12 @@ JOIN pg_authid auth ON auth.oid = ss.userid
 JOIN pg_database db ON db.oid = ss.dbid
 WHERE ss.total_exec_time > 1 -- 1 ms
 ORDER BY total_exec_time DESC
-limit 50
-\g (format=html)
+limit 50;
 
 --Full output
 SELECT *
 FROM  pg_stat_statements 
 WHERE total_exec_time > 1 -- 1 ms
 ORDER BY total_exec_time DESC
-limit 50
-\g (format=html)
+limit 50;
+\pset format aligned

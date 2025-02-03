@@ -1,3 +1,4 @@
+\pset format html
 SELECT t.tablename, 
        indexname, 
        c.reltuples AS num_rows, 
@@ -26,5 +27,5 @@ FROM   pg_tables t
                                  ON x.indexrelid = psai.indexrelid) AS foo 
                     ON t.tablename = foo.ctablename 
 WHERE t.schemaname = 'public'
-ORDER BY tablename, indexname
-\g (format=html)
+ORDER BY tablename, indexname;
+\pset format aligned

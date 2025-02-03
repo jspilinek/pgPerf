@@ -1,2 +1,3 @@
-SELECT * FROM pg_stat_database
-\g (format=html)
+\pset format html
+SELECT * FROM pg_stat_database;
+\pset format aligned

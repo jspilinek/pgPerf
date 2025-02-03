@@ -1,3 +1,4 @@
+\pset format html
 SELECT nspname                                        AS schemaname, 
        cl.relname                                     AS objectname, 
        CASE relkind 
@@ -18,5 +19,5 @@ FROM   pg_class cl
 WHERE  nspname NOT IN ( 'pg_catalog', 'information_schema' ) 
        AND cl.relkind <> 'i'
        AND nspname !~ '^pg_toast'
-ORDER  BY Pg_total_relation_size(cl.oid) DESC
-\g (format=html)
+ORDER  BY Pg_total_relation_size(cl.oid) DESC;
+\pset format aligned

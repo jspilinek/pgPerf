@@ -1,3 +1,4 @@
+\pset format html
 SELECT
     relname as table,
     pg_size_pretty(pg_relation_size(relid::regclass)) AS size,
@@ -15,5 +16,5 @@ WHERE
     schemaname = 'public'
     AND pg_relation_size(relid::regclass) > 80000
 ORDER BY
-    difference DESC
-\g (format=html)
+    difference DESC;
+\pset format aligned

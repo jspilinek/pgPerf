@@ -1,3 +1,4 @@
+\pset format html
 SELECT Current_database() 
        AS Current_Database --Current database 
        , 
@@ -14,5 +15,5 @@ SELECT Current_database()
        , 
        current_timestamp :: TIMESTAMP - Pg_postmaster_start_time() :: TIMESTAMP
        AS
-       Uptime
-\g (format=html)
+       Uptime;
+\pset format aligned

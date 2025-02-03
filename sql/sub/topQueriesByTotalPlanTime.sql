@@ -1,3 +1,4 @@
+\pset format html
 --SQL statements by total_plan_time
 SELECT auth.rolname AS "user", 
   db.datname AS "database", 
@@ -11,13 +12,12 @@ JOIN pg_authid auth ON auth.oid = ss.userid
 JOIN pg_database db ON db.oid = ss.dbid
 WHERE ss.total_plan_time > 1 -- 1 ms
 ORDER BY ss.total_plan_time DESC
-limit 50
-\g (format=html)
+limit 50;
 
 --Full output
 SELECT *
 FROM  pg_stat_statements ss
 WHERE ss.total_plan_time > 1 -- 1 ms
 ORDER BY ss.total_plan_time DESC
-limit 50
-\g (format=html)
+limit 50;
+\pset format aligned

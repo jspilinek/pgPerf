@@ -1,3 +1,4 @@
+\pset format html
 SELECT oid,
        table_schema,
        table_name,
@@ -20,5 +21,5 @@ FROM   (SELECT *,
                        LEFT JOIN pg_namespace n 
                               ON n.oid = c.relnamespace 
                 WHERE  relkind = 'r') a) a
-ORDER BY table_schema ASC, table_name ASC
-\g (format=html)
+ORDER BY table_schema ASC, table_name ASC;
+\pset format aligned

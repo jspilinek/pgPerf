@@ -1,3 +1,4 @@
+\pset format html
 SELECT
     schemaname AS schemaname,
     t.relname AS tablename,
@@ -22,5 +23,5 @@ WHERE
 ORDER BY
     schemaname ASC,
     tablename ASC,
-    indexname ASC
-\g (format=html)
+    indexname ASC;
+\pset format aligned

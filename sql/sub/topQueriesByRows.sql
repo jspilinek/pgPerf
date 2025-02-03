@@ -1,3 +1,4 @@
+\pset format html
 --SQL statements returning the most rows
 SELECT auth.rolname AS "user", 
   db.datname AS "database", 
@@ -10,13 +11,12 @@ FROM pg_stat_statements ss
 JOIN pg_authid auth ON auth.oid = ss.userid
 JOIN pg_database db ON db.oid = ss.dbid
 ORDER BY "Rows per Call" DESC
-limit 50
-\g (format=html)
+limit 50;
 
 --Full output
 SELECT ss.rows / ss.calls AS "Rows per Call",
 *
 FROM  pg_stat_statements ss
 ORDER BY "Rows per Call" DESC
-limit 50
-\g (format=html)
+limit 50;
+\pset format aligned
