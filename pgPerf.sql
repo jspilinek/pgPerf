@@ -6,6 +6,26 @@
 
 \pset tableattr class=sortable
 
+-- Check PostgreSQL version and set column names
+DO $$
+DECLARE
+    version_num int;
+BEGIN
+    SELECT current_setting('server_version_num')::int INTO version_num;
+
+    IF version_num >= 130000 THEN
+        PERFORM set_config('exec_time_column', 'total_exec_time', false);
+        PERFORM set_config('mean_time_column', 'mean_exec_time', false);
+        PERFORM set_config('max_time_column', 'max_exec_time', false);
+        PERFORM set_config('min_time_column', 'min_exec_time', false);
+    ELSE
+        PERFORM set_config('exec_time_column', 'total_time', false);
+        PERFORM set_config('mean_time_column', 'mean_time', false);
+        PERFORM set_config('max_time_column', 'max_time', false);
+        PERFORM set_config('min_time_column', 'min_time', false);
+    END IF;
+END $$;
+
 --Column 1
 \set scriptName version             \i sql/00_scriptLauncher.sql
 \set scriptName uptime              \i sql/00_scriptLauncher.sql
