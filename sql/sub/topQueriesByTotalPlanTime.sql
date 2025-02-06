@@ -24,7 +24,7 @@ limit 50;
         ';
     ELSE
         EXECUTE '
-        SELECT ''Unavailable in Postgres prior to version 13'' AS message;
+        SELECT ''Unavailable in Postgres 12'' AS message;
         ';
     END IF;
 END $$;
@@ -46,7 +46,7 @@ limit 50;
         ';
     ELSE
         EXECUTE '
-        SELECT ''Unavailable in Postgres prior to version 13'' AS message;
+        SELECT ''Unavailable in Postgres 12'' AS message;
         ';
     END IF;
 END $$;
