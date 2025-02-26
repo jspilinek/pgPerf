@@ -36,7 +36,7 @@ SELECT roles.rolname AS "user",
   ss.queryid,
   ss.calls,
   ss.rows,
-  ss.rows / ss.calls AS "Rows per Call",
+  CASE WHEN ss.calls > 0 THEN ss.rows / ss.calls ELSE 0 END AS "Rows per Call",
   substring(replace(replace(replace(ss.query,E'\n',''),E'\r',''),E'\t','') FROM 1 FOR 64) AS "query substring 64"
 FROM pg_stat_statements ss
 JOIN pg_roles roles ON roles.oid = ss.userid
@@ -46,7 +46,7 @@ limit 50
 ;
 
 --Full output
-SELECT ss.rows / ss.calls AS "Rows per Call",
+SELECT CASE WHEN ss.calls > 0 THEN ss.rows / ss.calls ELSE 0 END AS "Rows per Call",
 *
 FROM  pg_stat_statements ss
 ORDER BY "Rows per Call" DESC
