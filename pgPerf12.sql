@@ -18,6 +18,8 @@
 \set scriptName databaseSizes       \i sql/00_scriptLauncher.sql
 \set scriptName objectSizes         \i sql/00_scriptLauncher.sql
 \set scriptName tables              \i sql/00_scriptLauncher.sql
+\set scriptName tableUpdates        \i sql/00_scriptLauncher.sql
+\set scriptName tableSettings       \i sql/00_scriptLauncher.sql
 \set scriptName deadTuples          \i sql/00_scriptLauncher.sql
 \set scriptName columns             \i sql/00_scriptLauncher.sql
 
@@ -39,5 +41,6 @@
 \set scriptName topQueriesByCalls           \i sql/00_scriptLauncher.sql
 \set scriptName topQueriesByRows            \i sql/00_scriptLauncher.sql
 \set scriptName topQueriesByTotalPlanTime   \i sql/00_scriptLauncher.sql
+\set scriptName locks                       \i sql/00_scriptLauncher.sql
 
 \echo Done

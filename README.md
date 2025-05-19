@@ -5,7 +5,7 @@
 - To enable pg_stat_statements, add below lines to postgresl.conf
 ```
 shared_preload_libraries = 'pg_stat_statements'
-pg_stat_statements.track = all
+pg_stat_statements.track = top
 ```
 - Restart PostgreSQL
 - Create extension, in Codebeamer database execute:
